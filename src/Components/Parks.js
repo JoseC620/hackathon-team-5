@@ -6,6 +6,10 @@ import Park from "./Park";
 
 // import the API here from the utils folder, .env file, or wherever you are storing it
 
+const returnFunction = () => {
+    // x
+}
+
 function Parks({masterParkData, searchParams, language}) {
     console.log("test", masterParkData)
     // Takes array of objects, 
