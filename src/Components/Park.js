@@ -1,10 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ParkDetails from "./ParkDetails";
+import { useState } from "react";
 
 
-function Park({parkId}) {
+function Park({ park }) {
+
+
   return (
-    <div>
-      <h1>Park</h1>
+    <div className="parkrow">
+          <Link to={`/parks/${park.name311}`}> {park.name311}</Link>
     </div>
   );
 }
