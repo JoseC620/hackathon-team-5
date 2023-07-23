@@ -6,7 +6,15 @@ import Park from "./Park";
 
 // import the API here from the utils folder, .env file, or wherever you are storing it
 
-function Parks() {
+function Parks({masterParkData, searchParams, language}) {
+    console.log("test", masterParkData)
+    // Takes array of objects, 
+    const returnFunction = () => {
+        for (let i = 0; i < masterParkData.length; i++) {
+            console.log(masterParkData[i].eApply)
+        }
+    }
+    //returnFunction();
     return (
         <div>
             <Park/>
