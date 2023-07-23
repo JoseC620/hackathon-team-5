@@ -9,7 +9,7 @@ function ParkDetails() {
     return (
         <div>
         <h1>{park.fullName}</h1>
-        <h2>{park.designation}</h2>
+        <h2>{park.location}</h2>
         <p>{park.description}</p>
         <Link to="/">Back to Home</Link>
         <button onClick={() => navigate(-1)}>Back to Home</button>
