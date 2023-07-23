@@ -8,7 +8,7 @@ import { FiArrowRightCircle } from 'react-icons/fi';
 export default function Home() {
   return (
     <div className='home-container' >
-      <Nav />
+     
       <div className='home-banner-container'>
         <div className='home-bannerImage-container'>
             <img src={BannerBackground} alt="" />
