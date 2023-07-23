@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-// const API = process.env.REACT_APP_WEATHER_KEY;
+const API = process.env.REACT_APP_WEATHER_KEY;
 const BASE_URL = "http://api.weatherapi.com/v1/current.json?key=";
 
 function Weather() {
@@ -10,7 +10,7 @@ function Weather() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}242f7659d21c4660a75164724232307&q=New York&aqi=no`)
+      .get(`${BASE_URL}${API}&q=New York&aqi=no`)
       .then((response) => {
         // console.log(response.data);
         setWeather(response.data);
