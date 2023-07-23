@@ -28,15 +28,22 @@ function Parks() {
     //returnFunction();
     return (
         <div>
-            <table class="table">
-                <thead>
-                    
-           {parks.map((park) => {
-            return <Park key={park.globalid} park={park}/>
-           })}
-                </thead>
-            </table>
-        </div>
+        <table className="table">
+          <thead>
+            <tr className="parkInfo">
+              <span><b>Park Name</b></span>
+              <span className="loc"><b>Address</b></span>
+              <span className="zip"><b>Zipcode</b></span>
+            </tr>
+          </thead>
+          <tbody>
+            {parks.map((park) => {
+              return <Park key={park.globalid} park={park} />;
+            })}
+          </tbody>
+        </table>
+      </div>
+  
     )
 
 }

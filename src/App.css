@@ -427,9 +427,6 @@ nav {
 table {
   width: 100%;
   border-collapse: collapse;
-}
-
-thead {
   background-color: #f2f2f2;
   border: 5px solid #ccc;
   padding: 8px;
@@ -440,6 +437,12 @@ thead {
   border-bottom: 1px solid #ccc;
 }
 
+.parkInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .removeUnderline {
   text-decoration: none;
 }
@@ -447,6 +450,15 @@ thead {
 .parkLinks {
   text-decoration: none;
   color: green;
+}
+
+.zip {
+  margin-left: auto;
+}
+
+.loc {
+  flex-grow: 1;
+  text-align: center;
 }
 
 
