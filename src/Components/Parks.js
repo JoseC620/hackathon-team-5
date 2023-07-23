@@ -14,6 +14,7 @@ function Parks() {
     useEffect(() => {
         getParkData().then((response) => {
           setParks(response)
+          console.log(response)
         })
       }, [])
 
