@@ -3,10 +3,10 @@ import Parks from "../Components/Parks";
 
 
 
-function Index() {
+function Index({masterParkData, searchParams, language}) {
   return (
     <div>
-      <Parks/>
+      <Parks masterParkData = {masterParkData} searchParams = {searchParams} language = {language}/>
     </div>
   );
 }
