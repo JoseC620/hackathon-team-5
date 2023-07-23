@@ -8,13 +8,13 @@ function Park({ park }) {
 
 
   return (
-    <div className="parkrow">
-      <section className="parkInfo">
-          <Link to={`/parks/${park.name311}`} className="parkLinks"> {park.name311}</Link>
+    <tr className="parkrow">
+      <td className="parkInfo">
+          <Link to={`/parks/${park.name311.replace(/\s/g, '')}`} className="parkLinks"> {park.name311}</Link>
           <span className="loc">{park.location}</span>
           <span className="zip">{park.zipcode.substring(0,5)}</span>
-          </section>
-    </div>
+          </td>
+    </tr>
   );
 }
 

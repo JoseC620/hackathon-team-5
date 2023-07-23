@@ -428,13 +428,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #f2f2f2;
-  border: 5px solid #ccc;
+  border: 5px solid #a5f06f;
   padding: 8px;
   text-align: left;
 }
 
 .parkrow {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 5px solid #b5f08b;
 }
 
 .parkInfo {
