@@ -1,11 +1,17 @@
 
 import React from 'react'
-import Nav from '../Components/Nav';
+import { getParkData } from "../api/fetch"
 import BannerBackground from '../assets/home-banner-backgorund.png';
+import { useEffect, useState } from 'react';
 import BannerImage from '../assets/bannerImage.jpg'
 import { FiArrowRightCircle } from 'react-icons/fi';
 
 export default function Home() {
+  useEffect(() => {
+    getParkData().then((response) => {
+      console.log(response)
+    })
+  })
   return (
     <div className='home-container' >
      
