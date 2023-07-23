@@ -12,6 +12,7 @@ import Index from "./Pages/Index";
 function App() {
   return (
     <div className="App">
+
       <Nav />
       <main>
         <Routes>
@@ -22,6 +23,7 @@ function App() {
           <Route path="*" element={<FourZeroFour />} />
         </Routes>
       </main>
+
     </div>
   );
 }
