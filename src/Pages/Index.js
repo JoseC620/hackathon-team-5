@@ -1,5 +1,5 @@
 import React from "react";
-import Parks from "./Parks";
+import Parks from "../Components/Parks";
 
 
 
@@ -11,5 +11,5 @@ function Index() {
   );
 }
 
-module.exports = Index;
+export default Index;
 
