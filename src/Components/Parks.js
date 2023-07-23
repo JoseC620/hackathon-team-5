@@ -10,7 +10,7 @@ function Parks() {
         <div>
             <h1>Parks</h1>
         </div>
-
+    )
 
 }
 
