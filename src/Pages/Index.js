@@ -1,9 +1,15 @@
+import React from "react";
+import Parks from "../Components/Parks";
 
 
-export default function Index() {
-    return (
-        <div>
-            
-        </div>
-    )
+
+function Index() {
+  return (
+    <div>
+      <Parks/>
+    </div>
+  );
 }
+
+export default Index;
+
