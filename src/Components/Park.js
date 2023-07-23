@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Park() {
+function Park({parkId}) {
   return (
     <div>
       <h1>Park</h1>
