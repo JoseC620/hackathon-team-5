@@ -15,7 +15,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
 import logo from '../assets/logo.png';
-import { Navbar, Container } from "react-bootstrap";
 
 import { Link } from 'react-router-dom';
 
@@ -47,8 +46,8 @@ export default function Nav() {
                 <b>A List Of NYC Parks On the GO</b>
         </div>
         <div className='navbar-links-container'>
-            <a href="">Home</a>
-            <a href="">About</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
             <a href="">Translate</a>
             <a href="">
                 <BsTranslate className="navbar-translate-icon" />
