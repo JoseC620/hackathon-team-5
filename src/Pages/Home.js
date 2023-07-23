@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Nav from '../Components/Nav';
 import BannerBackground from '../assets/home-banner-backgorund.png';
@@ -27,7 +28,11 @@ export default function Home() {
           <img src={BannerImage} alt="" />
         </div>
       </div>
+
     </div>
   );
 }
+
+
+export default Home;
 
