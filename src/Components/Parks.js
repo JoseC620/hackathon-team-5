@@ -31,9 +31,9 @@ function Parks() {
         <table className="table">
           <thead>
             <tr className="parkInfo">
-              <span><b>Park Name</b></span>
-              <span className="loc"><b>Address</b></span>
-              <span className="zip"><b>Zipcode</b></span>
+              <td><b>Park Name</b></td>
+              <td className="loc"><b>Address</b></td>
+              <td className="zip"><b>Zipcode</b></td>
             </tr>
           </thead>
           <tbody>

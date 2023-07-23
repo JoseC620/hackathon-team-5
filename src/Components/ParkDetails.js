@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-function ParkDetails( { park } ) {
+function ParkDetails() {
+    const { parkName } = useParams();
+
+
     
     // return (
     //     <div>
