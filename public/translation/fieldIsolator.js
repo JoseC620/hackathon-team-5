@@ -4153,3 +4153,5 @@ of translating speech would be impractical.
 const sampData2 = "Canchas de bochas, canchas de baloncesto, canchas de tenis, parques infantiles, campos de fútbol, ​​pistas de patinaje sobre hielo, baños, campos de béisbol, playas, centros naturales, centros recreativos, piscinas";
 
 console.log(csvToObj(sampData1, sampData2));
+
+// hamster
