@@ -8,9 +8,12 @@ function Park({ park }) {
 
 
   return (
-    <div className="parkrow">
-          <Link to={`/parks/${park.name311}`} className="parkLinks"> {park.name311}</Link>
-    </div>
+    <tr className = "parkrow">
+      <td><Link to={`/parks/${park.name311}`} className="parkLinks"> {park.name311}</Link></td>
+    </tr>
+    // <div className="parkrow">
+    //       <Link to={`/parks/${park.name311}`} className="parkLinks"> {park.name311}</Link>
+    // </div>
   );
 }
 
