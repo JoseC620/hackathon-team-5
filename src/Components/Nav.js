@@ -13,13 +13,16 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import {validateZipCode} from "../validation/nycZipCodes.js";
+import {inputToParams} from "../validation/validationUtility.js";
+import {useNavigate} from "react-router-dom";
 
 import logo from '../assets/logo.png';
 
 import { Link } from 'react-router-dom';
 
-export default function Nav() {
+export default function Nav({setSearchParams}) {
+
+  const navigate = useNavigate();
 
   const [open, setOpen] = useState(false)
   const parkOptions = [
@@ -43,21 +46,16 @@ export default function Nav() {
     search = event.target.value;
   }
 
-  
-  // tests if input is valid.  Returns false if not valid;
-  const isValidInput = (testInput) => {
-
-  }
-
   const searchSubmit = (event) => {
     event.preventDefault();
-    const parkZip = validateZipCode(event.target.searchbox.value);
-    if (parkZip) {
-      console.log(parkZip)
+    const parkAddr = inputToParams(event.target.searchbox.value);
+    if (parkAddr) {
+      setSearchParams(parkAddr)
     } else {
-      console.log("Not found");
+      setSearchParams(null)
     }
     event.target.searchbox.value = "";
+    navigate("/parks");
 
   }
 
@@ -82,7 +80,7 @@ export default function Nav() {
           className = "searchInput"
           type = "search"
           onChange = {textChange}
-          placeholder = "Enter zipcode or New York City borough"
+          placeholder = "Zipcode or Borough"
           id = "searchbox"
           name = "searchbox"
           />

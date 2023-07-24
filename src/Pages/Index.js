@@ -1,12 +1,10 @@
 import React from "react";
 import Parks from "../Components/Parks";
 
-
-
-function Index({masterParkData, searchParams, language}) {
+function Index({searchParams, language}) {
   return (
     <div>
-      <Parks masterParkData = {masterParkData} searchParams = {searchParams} language = {language}/>
+      <Parks searchParams = {searchParams} language = {language}/>
     </div>
   );
 }
