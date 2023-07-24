@@ -16,9 +16,6 @@ function ParkDetails() {
       if (Object.keys(park).length === 0) {
         return <div>Loading...</div>; // You can display a loading message or a spinner here
       }
-
-      console.log(park)
-
     
     return (
         <div>

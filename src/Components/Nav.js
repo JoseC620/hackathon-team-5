@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BsTranslate } from 'react-icons/bs';
 import { HiOutlineBars4 } from 'react-icons/hi2';
 import HomeIcon from '@mui/icons-material/Home';
@@ -22,7 +22,6 @@ import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 export default function Nav({ setSearchParams, language, setLanguage }) {
-  console.log(navLangs);
 
   const navigate = useNavigate();
 

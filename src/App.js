@@ -9,6 +9,9 @@ import Index from "./Pages/Index";
 import { useState } from 'react';
 
 function App() {
+  /*
+  Used https://convertio.co/png-ico/ to convert logoCrop to .ico.  Replaced public/logo.ico.
+  */
 
   const [searchParams, setSearchParams] = useState(null);
   const [language, setLanguage] = useState("English");
