@@ -17,15 +17,6 @@ function Parks() {
         })
       }, [])
 
-// function Parks({masterParkData, searchParams, language}) {
-//     console.log("test", masterParkData)
-    // Takes array of objects, 
-    // const returnFunction = () => {
-    //     for (let i = 0; i < masterParkData.length; i++) {
-    //         console.log(masterParkData[i].eApply)
-    //     }
-    // }
-    //returnFunction();
     return (
         <div>
             <table class="table">
