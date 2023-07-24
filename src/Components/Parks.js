@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getParkData } from "../api/fetch"
 import Park from "./Park";
@@ -76,18 +76,27 @@ function Parks({ searchParams, language }) {
           </tbody>
         </table>
       </div>
-   */
 
-    return (
-        <div>
-            <table className="table">
-                <thead>
+                      <thead>
                     <tr className="parkInfo">
                         <td><b>Park Name</b></td>
                         <td className="loc"><b>Address</b></td>
                         <td className="zip"><b>Zipcode</b></td>
                     </tr>
                 </thead>
+   */
+
+    return (
+        <div>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <td><b>Park Name</b></td>
+                        <td className = "loc"><b>Address</b></td>
+                        <td className = "zip"><b>Zipcode</b></td>
+                    </tr>
+                </thead>
+
                 <tbody>
                     {parks.map((park) => {
                         return <Park key={park.globalid} park={park} />

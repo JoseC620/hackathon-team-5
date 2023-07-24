@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BsTranslate } from 'react-icons/bs';
 import { HiOutlineBars4 } from 'react-icons/hi2';
 import HomeIcon from '@mui/icons-material/Home';
@@ -13,18 +13,21 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import {inputToParams} from "../validation/validationUtility.js";
-import {useNavigate} from "react-router-dom";
+import { inputToParams } from "../validation/validationUtility.js";
+import { useNavigate } from "react-router-dom";
+import {navLangs} from "./componentsLanguages.js";
 
 import logo from '../assets/logo.png';
 
 import { Link } from 'react-router-dom';
 
-export default function Nav({setSearchParams}) {
+export default function Nav({ setSearchParams, language, setLanguage }) {
+  console.log(navLangs);
 
   const navigate = useNavigate();
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+
   const parkOptions = [
     {
       text: "Home",
@@ -40,12 +43,6 @@ export default function Nav({setSearchParams}) {
     },
   ];
 
-  let search = "";
-
-  const textChange = (event) => {
-    search = event.target.value;
-  }
-
   const searchSubmit = (event) => {
     event.preventDefault();
     const parkAddr = inputToParams(event.target.searchbox.value);
@@ -58,6 +55,12 @@ export default function Nav({setSearchParams}) {
     navigate("/parks");
 
   }
+  /*
+  <Link to="/about">About</Link>
+  <a href="">Translate</a> <== removed
+
+          <b>A List Of NYC Parks On the GO</b>
+  */
 
   return (
 
@@ -66,25 +69,40 @@ export default function Nav({setSearchParams}) {
         <Link to='/'>
           <img src={logo} alt="" />
         </Link>
-        <b>A List Of NYC Parks On the GO</b>
+        <b>{navLangs[language]["A List Of NYC Parks On the GO"]}</b>
       </div>
       <div className='navbar-links-container'>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <a href="">Translate</a>
+        <Link to="/">{navLangs[language]["Home"]}</Link>
+        <Link to="/about">{navLangs[language]["About"]}</Link>
+
+        <select name="languageSelect"
+          onChange={(event) => setLanguage(event.target.value)}
+          defaultValue="English"
+        >
+          <option>English</option>
+          <option>Español</option>
+          <option>中国人</option>
+          <option>Русский</option>
+          <option>Italiano</option>
+          <option>한국인</option>
+          <option>Français</option>
+          <option>Polski</option>
+          <option>عربي</option>
+          <option>هندي</option>
+        </select>
+
         <a href="">
           <BsTranslate className="navbar-translate-icon" />
         </a>
         <form className="searchForm" onSubmit={searchSubmit}>
           <input
-          className = "searchInput"
-          type = "search"
-          onChange = {textChange}
-          placeholder = "Zipcode or Borough"
-          id = "searchbox"
-          name = "searchbox"
+            className="searchInput"
+            type="search"
+            placeholder="Zipcode or Borough"
+            id="searchbox"
+            name="searchbox"
           />
-          <button className='primary-button' type = 'submit'>🛝 Search Here</button>
+          <button className='primary-button' type='submit'>🛝 {navLangs[language]["Search Here"]}</button>
         </form>
       </div>
       <div className='navbar-menu-container'>

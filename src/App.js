@@ -6,7 +6,7 @@ import About from "./Pages/About";
 import ShowPark from "./Pages/ShowPark";
 import FourZeroFour from "./Pages/FourZeroFour";
 import Index from "./Pages/Index";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Nav setSearchParams = {setSearchParams} />
+      <Nav setSearchParams = {setSearchParams} language = {language} setLanguage = {setLanguage}/>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
