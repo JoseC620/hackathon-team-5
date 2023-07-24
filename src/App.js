@@ -7,30 +7,21 @@ import ShowPark from "./Pages/ShowPark";
 import FourZeroFour from "./Pages/FourZeroFour";
 import Index from "./Pages/Index";
 import { useEffect, useState } from 'react';
-import { getParkData } from "./api/fetch"
-
 
 function App() {
 
-  const [masterParkData, setMasterParkData] = useState(null);
   const [searchParams, setSearchParams] = useState(null);
   const [language, setLanguage] = useState("English");
-
-  useEffect(() => {
-    getParkData().then((response) => {
-      setMasterParkData (response);
-    })
-  },[]);
 
   return (
     <div className="App">
       <Router>
-      <Nav />
+      <Nav setSearchParams = {setSearchParams} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/parks" element={<Index masterParkData = {masterParkData} searchParams = {searchParams} language = {language}/>} />
+          <Route path="/parks" element={<Index searchParams = {searchParams} language = {language}/>} />
           <Route path="/parks/:parkId" element={<ShowPark />} />
           <Route path="*" element={<FourZeroFour />} />
         </Routes>
