@@ -19,7 +19,7 @@ function App() {
       <Nav setSearchParams = {setSearchParams} language = {language} setLanguage = {setLanguage}/>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home language = {language}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/parks" element={<Index searchParams = {searchParams} language = {language}/>} />
           <Route path="/parks/:parkId" element={<ShowPark />} />
