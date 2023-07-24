@@ -1,7 +1,7 @@
 
 import React from 'react'
 import BannerBackground from '../assets/home-banner-backgorund.png';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import BannerImage from '../assets/bannerImage.jpg'
 import { FiArrowRightCircle } from 'react-icons/fi';
 import Weather from '../Components/Weather';
