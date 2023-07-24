@@ -4,13 +4,13 @@ import { BsPlayBtnFill } from 'react-icons/bs';
 
 export default function About() {
   return (
-    <div>
+    <div className='about'>
       <div className="about-section-container">
       <div className="about-background-image-container">
         <img src={AboutBackground} alt="" />
       </div>
       <div className="about-section-image-container">
-        <img src={AboutBackgroundImage} alt="" />
+        <img src={AboutBackgroundImage} alt="" className='homeimg'/>
       </div>
       <div className="about-section-text-container">
         <p className="primary-subheading">About</p>

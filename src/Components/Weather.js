@@ -32,10 +32,9 @@ return (
         
         <h2>{weather.location.country}</h2>
         <h2>Local time: {weather.location.localtime}</h2>
-        <h2>Current Temp: {weather.current.temp_f}</h2>
+        <h2>Current Temp: {weather.current.temp_f}°</h2>
         
-        <h2>Current condition: {weather.current.condition.text}</h2>
-        <img src={weather.current.condition.icon} alt="" />
+        <h2>Current condition: {weather.current.condition.text} ☀️</h2>
       </div>
       
     </div>

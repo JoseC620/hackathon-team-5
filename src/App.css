@@ -4,9 +4,13 @@
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
 }
-img {
+.homeimg {
   max-width: 100%;
   height: auto;
+}
+
+.navimg {
+  width: 100px;
 }
 .App {
   min-height: 100vh;
@@ -20,7 +24,7 @@ body {
 }
 
 body {
-  background-color: #f6f6f6;
+  background-color: #7de174;
 }
 
 nav {
@@ -272,7 +276,42 @@ table {
   text-align: center;
 }
 
+.parkDetails {
+  display: flex;
+  justify-content: center;
+}
 
+.parkStuff {
+  margin-top: 40px;
+}
 
+.theMap {
+  margin-left: 100px;
+  margin-top: 40px;
+  width: 500px;
+  height: 500px;
+}
 
+.parkImg {
+  width: 600px;
+}
 
+.about {
+  margin-top: -300px;
+  margin-left: 80px;
+}
+
+.goBack {
+  width: 120px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
