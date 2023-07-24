@@ -1,4 +1,9 @@
 <h1>🛝 ParksToGo  </h1>
+
+![parks2GOapp](https://github.com/JoseC620/hackathon-team-5/assets/70655971/bbbe05f6-1c12-4507-a46c-12fbcc42f164)
+![parks2goappimg2](https://github.com/JoseC620/hackathon-team-5/assets/70655971/a1026ed8-8a82-4cdd-a2db-a3aa093c61d4)
+
+
 <hr><p>This project began based on a lack of detailed and concise and up to date information available to people regarding NYC Parks.</p><h2>General Information</h2>
 <hr><ul>
 <li>An on the go, up to date App listing available Parks in your general area.</li>
