@@ -315,3 +315,21 @@ table {
   cursor: pointer;
   text-decoration: none;
 }
+
+.searchInput {
+  padding: 10px 25px;
+  /* background: transparent; */
+  border: 1px solid green;
+  border-width: 2px;
+  border-radius: 10px;
+  outline: none;
+  /* cursor: pointer; */
+}
+
+.navbar-links-container {
+  /* width: 60%;
+  height: 5%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
