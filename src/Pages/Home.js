@@ -8,8 +8,17 @@ import { homeLangs } from './pagesLanguages';
 
 export default function Home({ language }) {
   return (
+
     <Row>
       <Col sm={12} md={6} className='home-banner-container'>
+
+    <div className='home-container' >
+     
+      <div className='home-banner-container'> 
+        <div className='home-bannerImage-container'>
+            <img src={BannerBackground} alt="" className='homeimg'/>
+        </div>
+
         <div className="home-text-section">
           <h1 className="primary-heading">
             {homeLangs[language]["Your Favorite NYC Parks in One Place"]}
@@ -22,8 +31,13 @@ export default function Home({ language }) {
               {homeLangs[language]["Search Now"]} <FiArrowRightCircle />{" "}
             </button> */}
           </Link>
+
+          <h1>Weather today:</h1>
+          <Weather/>
+        </div>
+
         <div className="home-image-section">
-          <img src={BannerImage} alt="" />
+          <img src={BannerImage} alt="" className='homeimg'/>
         </div>
         </div>
       <Col sm={12} md={6}>

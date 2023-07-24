@@ -65,7 +65,7 @@ export default function Nav({ setSearchParams, language, setLanguage }) {
     <nav>
       <div className='nav-logo-container'>
         <Link to='/'>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" className='navimg'/>
         </Link>
         <b>{navLangs[language]["A List Of NYC Parks On the GO"]}</b>
       </div>
