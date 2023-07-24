@@ -1,18 +1,32 @@
-import React from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { getOnePark } from "../api/fetch";
 
 
 function ParkDetails() {
+    const { parkId } = useParams();
+    const [park,setPark] = useState([])
+
+    useEffect(() => {
+        getOnePark(parkId).then((response) => {
+          setPark(response[0])
+        })
+      }, [])
+
+      if (Object.keys(park).length === 0) {
+        return <div>Loading...</div>; // You can display a loading message or a spinner here
+      }
+
+      console.log(park)
+
     
     return (
         <div>
-        <h1>{park.fullName}</h1>
+        <h1>{park.name311}</h1>
         <h2>{park.location}</h2>
-        <p>{park.description}</p>
+        <h2>{park.zipcode.substring(0,5)}</h2>
+        <a href={`${park.url}`}>{park.url}</a>
         <Link to="/">Back to Home</Link>
-        <button onClick={() => navigate(-1)}>Back to Home</button>
         </div>
     );
     }

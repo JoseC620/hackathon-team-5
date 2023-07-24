@@ -1,11 +1,11 @@
 import React from "react";
-
+import ParkDetails from "../Components/ParkDetails";
 
 function ShowPark() {
 
     return (
         <div>
-        <h1>ShowPark</h1>
+            <ParkDetails />
         </div>
     );
     }

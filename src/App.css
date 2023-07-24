@@ -424,4 +424,44 @@ nav {
   }
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  border: 5px solid #a5f06f;
+  padding: 8px;
+  text-align: left;
+}
+
+.parkrow {
+  border-bottom: 5px solid #b5f08b;
+}
+
+.parkInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.removeUnderline {
+  text-decoration: none;
+}
+
+.parkLinks {
+  text-decoration: none;
+  color: green;
+}
+
+.zip {
+  margin-left: auto;
+}
+
+.loc {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+
+
 
