@@ -14,6 +14,7 @@ function Parks({ searchParams, language }) {
 
     useEffect(() => {
 
+
         if (searchParams === null) {
             console.log("Parks, searchParams null", searchParams)
             getParkData().then((response) => {
@@ -85,7 +86,6 @@ function Parks({ searchParams, language }) {
                     </tr>
                 </thead>
    */
-
     return (
         <div>
             <table className="table">
