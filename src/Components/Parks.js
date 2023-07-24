@@ -19,6 +19,7 @@ function Parks({ searchParams, language }) {
             console.log("Parks, searchParams null", searchParams)
             getParkData().then((response) => {
                 setParks(response);
+                console.log(parks)
             })
         } else {
             console.log("Parks, searchParams not null", searchParams)
@@ -38,6 +39,8 @@ function Parks({ searchParams, language }) {
 
 
     }, [searchParams])
+
+    console.log(parks)
 
     // function Parks({masterParkData, searchParams, language}) {
     //     console.log("test", masterParkData)
